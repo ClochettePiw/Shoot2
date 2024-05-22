@@ -5,15 +5,21 @@ using UnityEngine;
 public class MainShip : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public GameObject bullet;
     public float speed;
+    public float leftBorder;
+    public float rightBorder;
+    public Transform newPos;
+    public bool canShoot = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
     void Update()
     {
         CheckInput();
+        CheckBorder();
     }
 
     public void CheckInput()
@@ -35,9 +41,37 @@ public class MainShip : MonoBehaviour
             Move(move);
         }
 
-        if (Input.GetKey (KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-            Shoot();
+            if (!canShoot) return;
+            else 
+            {
+                canShoot = false;
+                Shoot();
+                StartCoroutine(ShootTimer());
+            }
+
+                
+                
+        }
+    }
+
+    IEnumerator ShootTimer()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        canShoot = true;
+    }
+
+    public void CheckBorder()
+    {
+        if (transform.position.x < leftBorder)
+        {
+            transform.position = new Vector2(leftBorder, transform.position.y);
+        }
+        else if (transform.position.x > rightBorder)
+        {
+            transform.position = new Vector2(rightBorder, transform.position.y);
         }
     }
 
@@ -49,6 +83,7 @@ public class MainShip : MonoBehaviour
     public void Shoot()
     {
 
-    }
 
+        Instantiate(bullet, newPos);
+    }
 }
