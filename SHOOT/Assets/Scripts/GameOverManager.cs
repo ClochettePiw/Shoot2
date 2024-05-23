@@ -22,6 +22,7 @@ public class GameOverManager : MonoBehaviour
         if (playerHealth.currentHealth <= 0)
         {
             gameOverMenu.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
@@ -37,8 +38,8 @@ public class GameOverManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    void TheFinalScoreText()
+    public void UpdateFinalScoreText()
     {
-        //ScoreText.text = "Score Final: " + currentScore.ToString();
+        FinalScoreText.text = "Followers Finaux: " + score.instance.currentScore.ToString();
     }
 }
