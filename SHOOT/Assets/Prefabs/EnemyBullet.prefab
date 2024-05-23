@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 40059225843808317}
   - component: {fileID: 6310338182203342310}
-  - component: {fileID: -5682582774146464741}
   - component: {fileID: 5809928785323027723}
   - component: {fileID: 8970657421405058236}
+  - component: {fileID: 3103233735950229131}
   m_Layer: 0
-  m_Name: GoodBullet
-  m_TagString: GoodBullet
+  m_Name: EnemyBullet
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f978135eb2d27564380be2af6999c911, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5682582774146464741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7335386612864256803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28a2853602b53f64d9ea0bba4399927e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  RATIO: {fileID: 5369507679216383238, guid: febd0144772141141bb73ddca57363aa, type: 3}
-  speed: 5000
 --- !u!58 &5809928785323027723
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -164,3 +149,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &3103233735950229131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7335386612864256803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34ad3261bd747940a1ee576e75d6220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5000
+  rb: {fileID: 0}

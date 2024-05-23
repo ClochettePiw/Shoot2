@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class MondayEnemy : MonoBehaviour
 {
-    public bool retweetMob;
     public Rigidbody2D rb;
     public float speed;
     void Start()

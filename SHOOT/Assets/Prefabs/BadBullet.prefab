@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5809928785323027723}
   - component: {fileID: 8970657421405058236}
   m_Layer: 0
-  m_Name: GoodBullet
-  m_TagString: GoodBullet
+  m_Name: BadBullet
+  m_TagString: BadBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f978135eb2d27564380be2af6999c911, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c98f9f37e4cfad142a1474a63c41e049, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   RATIO: {fileID: 5369507679216383238, guid: febd0144772141141bb73ddca57363aa, type: 3}
   speed: 5000
+  newPos: {fileID: 0}
 --- !u!58 &5809928785323027723
 CircleCollider2D:
   m_ObjectHideFlags: 0

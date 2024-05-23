@@ -5,7 +5,9 @@ using UnityEngine;
 public class BulletPrefab : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public GameObject RATIO;
     public float speed;
+    public Transform newPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,32 @@ public class BulletPrefab : MonoBehaviour
     {
         if (collision.CompareTag("Wall")) Destroy(gameObject);
 
-        if (collision.CompareTag("Enemy") && collision.GetComponent<MondayEnemy>().retweetMob) Destroy(collision.gameObject);
+
+
+        if (collision.CompareTag("Enemy") && collision.GetComponent<EnemyStatut>().retweetMob && tag == "BadBullet")
+        {
+            newPos = collision.transform;
+
+            Instantiate(RATIO, newPos);
+            score.instance.currentScore += collision.GetComponent<EnemyStatut>().enemyScore;
+            score.instance.UpdateScoreText();
+            Destroy(gameObject);
+            collision.GetComponent<BoxCollider2D>().enabled = false;
+            collision.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else if (collision.CompareTag("Enemy") && !collision.GetComponent<EnemyStatut>().retweetMob && tag == "GoodBullet")
+        {
+            newPos = collision.transform;
+
+            Instantiate(RATIO, newPos);
+            score.instance.currentScore += collision.GetComponent<EnemyStatut>().enemyScore;
+            score.instance.UpdateScoreText();
+            Destroy(gameObject);
+            collision.GetComponent<BoxCollider2D>().enabled = false;
+            collision.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else return;
+
+
     }
 }
