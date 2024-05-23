@@ -18,7 +18,6 @@ public class RATIO : MonoBehaviour
         if (transform.localScale.x >= 1)
         {
             Debug.Log("RATIOED");
-            Destroy(gameObject.transform.parent); 
             Destroy(gameObject);
         }
             

@@ -190,4 +190,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   retweetMob: 0
-  enemyScore: 0
+  enemyScore: 5000
