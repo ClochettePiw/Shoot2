@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
+    public static HealthUI instance;
     public Sprite fullHeart;
     public Sprite emptyHeart;
     public Image[] hearts;
@@ -13,6 +14,7 @@ public class HealthUI : MonoBehaviour
 
     void Start()
     {
+        instance = this;
         playerHealth = FindObjectOfType<PlayerHealth>();
         UpdateHearts();
     }
