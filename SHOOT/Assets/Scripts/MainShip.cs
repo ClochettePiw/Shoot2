@@ -6,7 +6,8 @@ public class MainShip : MonoBehaviour
 {
     public static MainShip instance;
     public Rigidbody2D rb;
-    public GameObject bullet;
+    public GameObject likeBullet;
+    public GameObject retweetBullet;
     public float speed;
     public float leftBorder;
     public float rightBorder;
@@ -49,12 +50,19 @@ public class MainShip : MonoBehaviour
             else 
             {
                 canShoot = false;
-                Shoot();
+                LikeShoot();
+                StartCoroutine(ShootTimer());
+            }  
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (!canShoot) return;
+            else
+            {
+                canShoot = false;
+                RetweetShoot();
                 StartCoroutine(ShootTimer());
             }
-
-                
-                
         }
     }
 
@@ -64,7 +72,6 @@ public class MainShip : MonoBehaviour
 
         canShoot = true;
     }
-
     public void CheckBorder()
     {
         if (transform.position.x < leftBorder)
@@ -82,10 +89,12 @@ public class MainShip : MonoBehaviour
         rb.velocity = new Vector2(move * Time.deltaTime, 0);
     }
 
-    public void Shoot()
+    public void LikeShoot()
     {
-
-
-        Instantiate(bullet, newPos);
+        Instantiate(likeBullet, newPos);
+    }
+    public void RetweetShoot()
+    {
+        Instantiate(retweetBullet, newPos);
     }
 }

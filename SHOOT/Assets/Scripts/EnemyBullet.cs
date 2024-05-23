@@ -15,4 +15,12 @@ public class EnemyBullet : MonoBehaviour
     {
         rb.velocity = new Vector2(0, speed * Time.deltaTime);
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            PlayerHealth.Instance.currentHealth -= 1;
+        }
+    }
 }

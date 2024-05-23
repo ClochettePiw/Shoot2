@@ -12,4 +12,11 @@ public class EnemyStatut : MonoBehaviour
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            PlayerHealth.Instance.currentHealth -= 1;
+        }
+    }
 }

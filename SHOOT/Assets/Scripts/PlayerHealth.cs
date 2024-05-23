@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public static PlayerHealth Instance;
     public int maxHealth = 5;
     public int currentHealth;
 
     void Start()
     {
+        Instance = this;
         currentHealth = maxHealth;
     }
 
