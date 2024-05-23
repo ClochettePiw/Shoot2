@@ -189,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   rb: {fileID: 0}
-  canShoot: 0
+  canShoot: 1
   newPos: {fileID: 7909706757729743307}
   bullet: {fileID: 7335386612864256803, guid: 6334ca666cc0ff946bdf4065297932e7, type: 3}
 --- !u!1 &7985863586056943542
