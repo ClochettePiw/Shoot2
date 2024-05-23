@@ -31,9 +31,9 @@ public class BulletPrefab : MonoBehaviour
     {
         if (collision.CompareTag("Wall")) Destroy(gameObject);
 
-        
 
-        if (collision.CompareTag("Enemy") && collision.GetComponent<EnemyStatut>().retweetMob)
+
+        if (collision.CompareTag("Enemy") && collision.GetComponent<EnemyStatut>().retweetMob && tag == "BadBullet")
         {
             newPos = collision.transform;
 
@@ -44,10 +44,18 @@ public class BulletPrefab : MonoBehaviour
             collision.GetComponent<BoxCollider2D>().enabled = false;
             collision.GetComponent<SpriteRenderer>().enabled = false;
         }
-        else
+        else if (collision.CompareTag("Enemy") && !collision.GetComponent<EnemyStatut>().retweetMob && tag == "GoodBullet")
         {
+            newPos = collision.transform;
 
+            Instantiate(RATIO, newPos);
+            score.instance.currentScore += collision.GetComponent<EnemyStatut>().enemyScore;
+            score.instance.UpdateScoreText();
+            Destroy(gameObject);
+            collision.GetComponent<BoxCollider2D>().enabled = false;
+            collision.GetComponent<SpriteRenderer>().enabled = false;
         }
+        else return;
 
 
     }
