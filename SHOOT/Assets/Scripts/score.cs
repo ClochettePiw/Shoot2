@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,7 @@ public class score : MonoBehaviour
 {
     public int ScoreBase = 0;
     public int currentScore;
-    public Text scoreText;
+    public TMPro.TextMeshProUGUI scoreText;
 
     void Start()
     {
@@ -30,6 +31,6 @@ public class score : MonoBehaviour
 
     void UpdateScoreText()
     {
-        scoreText.text = "Score: " + currentScore;
+        scoreText.text = "Score: " + currentScore.ToString();
     }
 }
