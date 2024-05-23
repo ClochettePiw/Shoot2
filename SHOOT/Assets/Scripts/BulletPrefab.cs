@@ -29,6 +29,13 @@ public class BulletPrefab : MonoBehaviour
     {
         if (collision.CompareTag("Wall")) Destroy(gameObject);
 
-        if (collision.CompareTag("Enemy") && collision.GetComponent<MondayEnemy>().retweetMob) Destroy(collision.gameObject);
+        if (collision.CompareTag("Enemy") && collision.GetComponent<MondayEnemy>().retweetMob)
+        {
+            Destroy(collision.gameObject);
+            score.instance.currentScore += 10;
+            score.instance.UpdateScoreText();
+        }
+            
+            
     }
 }

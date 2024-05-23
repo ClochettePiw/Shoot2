@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MainShip : MonoBehaviour
 {
+    public static MainShip instance;
     public Rigidbody2D rb;
     public GameObject bullet;
     public float speed;
@@ -14,6 +15,7 @@ public class MainShip : MonoBehaviour
 
     void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
     }
     void Update()
