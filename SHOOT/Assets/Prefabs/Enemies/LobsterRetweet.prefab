@@ -189,5 +189,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7c87721908f054fa49389d093c4dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  retweetMob: 0
-  enemyScore: 0
+  retweetMob: 1
+  enemyScore: 5000
