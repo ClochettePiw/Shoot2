@@ -39,6 +39,6 @@ public class GameOverManager : MonoBehaviour
 
     void TheFinalScoreText()
     {
-        ScoreText.text = "Score Final: " + currentScore.ToString();
+        //ScoreText.text = "Score Final: " + currentScore.ToString();
     }
 }
