@@ -31,22 +31,22 @@ public class LobsterEnemy : MonoBehaviour
 
     IEnumerator MovementCoroutine()
     {
-        rb.velocity = new Vector2(15, 0);
+        rb.velocity = new Vector2(10, 0);
         yield return new WaitForSeconds(waitingTime);
         rb.velocity = new Vector2(0, 0);
         yield return new WaitForSeconds(waitingTime * 0.5f);
 
-        rb.velocity = new Vector2(-15, 0);
+        rb.velocity = new Vector2(-10, 0);
         yield return new WaitForSeconds(waitingTime);
         rb.velocity = new Vector2(0, 0);
         yield return new WaitForSeconds(waitingTime * 0.5f);
 
-        rb.velocity = new Vector2(15, 0);
+        rb.velocity = new Vector2(10, 0);
         yield return new WaitForSeconds(waitingTime);
         rb.velocity = new Vector2(0, 0);
         yield return new WaitForSeconds(waitingTime * 0.5f);
 
-        rb.velocity = new Vector2(-15, 0);
+        rb.velocity = new Vector2(-10, 0);
         yield return new WaitForSeconds(waitingTime);
         rb.velocity = new Vector2(0, 0);
         yield return new WaitForSeconds(waitingTime * 0.5f);
@@ -55,7 +55,7 @@ public class LobsterEnemy : MonoBehaviour
 
     public void Moving()
     {
-        rb.velocity = new Vector2(0, 10);
+        rb.velocity = new Vector2(0, 5);
         Debug.Log("attaque finale");
     }
 }

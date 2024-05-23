@@ -22,6 +22,7 @@ public class Life : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerHealth.Instance.currentHealth += 1;
+            Destroy(gameObject);
         }
     }
 }

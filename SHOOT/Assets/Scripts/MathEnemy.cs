@@ -22,7 +22,7 @@ public class MathEnemy : MonoBehaviour
 
     public void Moving()
     {
-        rb.velocity = new Vector2(10, 0);
+        rb.velocity = new Vector2(5, 0);
     }
 
     public IEnumerator Shoot()
