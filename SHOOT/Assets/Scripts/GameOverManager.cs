@@ -21,6 +21,7 @@ public class GameOverManager : MonoBehaviour
     {
         if (playerHealth.currentHealth <= 0)
         {
+            UpdateFinalScoreText();
             gameOverMenu.SetActive(true);
             Time.timeScale = 0;
         }
