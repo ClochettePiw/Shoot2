@@ -28,5 +28,7 @@ public class BulletPrefab : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Wall")) Destroy(gameObject);
+
+        if (collision.CompareTag("Enemy") && collision.GetComponent<MondayEnemy>().retweetMob) Destroy(collision.gameObject);
     }
 }
