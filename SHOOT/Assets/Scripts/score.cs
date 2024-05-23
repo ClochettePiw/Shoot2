@@ -33,6 +33,6 @@ public class score : MonoBehaviour
 
     public void UpdateScoreText()
     {
-        scoreText.text = "Score: " + currentScore.ToString();
+        scoreText.text = "Followers : " + currentScore.ToString();
     }
 }
