@@ -17,7 +17,7 @@ public class MathEnemy : MonoBehaviour
     void Update()
     {
         Moving();
-        if (canShoot) StartCoroutine(Shoot()); 
+        if (canShoot && !GetComponent<EnemyStatut>().isDead) StartCoroutine(Shoot());
     }
 
     public void Moving()

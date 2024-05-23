@@ -6,6 +6,7 @@ public class EnemyBullet : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D rb;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

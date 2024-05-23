@@ -41,6 +41,7 @@ public class BulletPrefab : MonoBehaviour
             score.instance.currentScore += collision.GetComponent<EnemyStatut>().enemyScore;
             score.instance.UpdateScoreText();
             Destroy(gameObject);
+            collision.GetComponent<EnemyStatut>().isDead = true;
             collision.GetComponent<BoxCollider2D>().enabled = false;
             collision.GetComponent<SpriteRenderer>().enabled = false;
         }
@@ -52,6 +53,7 @@ public class BulletPrefab : MonoBehaviour
             score.instance.currentScore += collision.GetComponent<EnemyStatut>().enemyScore;
             score.instance.UpdateScoreText();
             Destroy(gameObject);
+            collision.GetComponent<EnemyStatut>().isDead = true;
             collision.GetComponent<BoxCollider2D>().enabled = false;
             collision.GetComponent<SpriteRenderer>().enabled = false;
         }

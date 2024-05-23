@@ -6,7 +6,7 @@ public class EnemyStatut : MonoBehaviour
 {
     public bool retweetMob;
     public int enemyScore;
-   
+    public bool isDead;
     public IEnumerator Destruction()
     {
         yield return new WaitForSeconds(2);
