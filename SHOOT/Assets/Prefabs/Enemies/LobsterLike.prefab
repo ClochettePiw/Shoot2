@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3407480423192992837}
   - component: {fileID: 3469628197049478045}
   - component: {fileID: 4220980532340505165}
+  - component: {fileID: -4203178710835430586}
+  - component: {fileID: 7634952206752887204}
   m_Layer: 0
   m_Name: LobsterLike
   m_TagString: Enemy
@@ -158,3 +160,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &-4203178710835430586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442574602523358677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f238c671d0ee224a9faa167113dae82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  speed: 2000
+  waitingTime: 1
+  isAttacking: 0
+  isDodging: 0
+--- !u!114 &7634952206752887204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442574602523358677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7c87721908f054fa49389d093c4dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  retweetMob: 0
+  enemyScore: 0

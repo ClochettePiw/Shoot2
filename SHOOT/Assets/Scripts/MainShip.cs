@@ -43,7 +43,7 @@ public class MainShip : MonoBehaviour
             Move(move);
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             if (!canShoot) return;
             else 

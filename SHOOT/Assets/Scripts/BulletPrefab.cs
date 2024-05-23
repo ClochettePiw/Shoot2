@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletPrefab : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public GameObject RATIO;
     public float speed;
     // Start is called before the first frame update
     void Start()
@@ -29,13 +30,19 @@ public class BulletPrefab : MonoBehaviour
     {
         if (collision.CompareTag("Wall")) Destroy(gameObject);
 
-        if (collision.CompareTag("Enemy") && collision.GetComponent<MondayEnemy>().retweetMob)
+        if (collision.CompareTag("Enemy") && collision.GetComponent<EnemyStatut>().retweetMob)
         {
-            Destroy(collision.gameObject);
-            score.instance.currentScore += 10;
+            Instantiate(RATIO, parent: collision.gameObject.transform);
+            score.instance.currentScore += collision.GetComponent<EnemyStatut>().enemyScore;
             score.instance.UpdateScoreText();
         }
-            
-            
+        else if (collision.CompareTag("Enemy") && collision.GetComponent<EnemyStatut>().retweetMob)
+        {
+            Instantiate(RATIO, parent: collision.gameObject.transform);
+            score.instance.currentScore += collision.GetComponent<EnemyStatut>().enemyScore;
+            score.instance.UpdateScoreText();
+        }
+
+
     }
 }

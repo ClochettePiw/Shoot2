@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+  RATIO: {fileID: 5369507679216383238, guid: febd0144772141141bb73ddca57363aa, type: 3}
   speed: 5000
 --- !u!58 &5809928785323027723
 CircleCollider2D:

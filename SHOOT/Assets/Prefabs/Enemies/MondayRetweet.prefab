@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2485396291732333562}
   - component: {fileID: 5260001837347788674}
   - component: {fileID: 7662026732795488207}
+  - component: {fileID: -6440562654208684239}
   m_Layer: 0
   m_Name: MondayRetweet
   m_TagString: Enemy
@@ -99,7 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ce56096a885684ab6c27b6a90978bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  retweetMob: 1
   rb: {fileID: 0}
   speed: 1000
 --- !u!50 &5260001837347788674
@@ -174,3 +174,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &-6440562654208684239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2584077199317156968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7c87721908f054fa49389d093c4dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  retweetMob: 0
+  enemyScore: 0
