@@ -24,11 +24,8 @@ public class PlayerHealth : MonoBehaviour
 
     void GainHealth()
     {
-        if (currentHealth < maxHealth)
-        {
             currentHealth++;
             Debug.Log("Vie augmenté à: " + currentHealth);
-        }
     }
 
     void LoseHealth()
